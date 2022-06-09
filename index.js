@@ -92,13 +92,12 @@ Use the addFlavor function below to do the following:
 
 function addFlavor(arr, flavor) {
   
-  // console.log([arr.unshift(flavor)])
   arr.unshift(flavor)
   return arr
   
 }
 
-addFlavor(originalFlavors,'Rainbow Sherbert')
+// addFlavor(originalFlavors,'Rainbow Sherbert')
 
 
 
@@ -114,8 +113,9 @@ Use the removeLastFlavor function below to do the following:
 */
 
 
-function removeLastFlavor(/*your code here*/){
- /*your code here*/
+function removeLastFlavor(arr){
+  arr.pop()
+  return arr
 }
 
 
@@ -132,8 +132,8 @@ Use the getFlavorByIndex function below to do the following:
 */
 
 
-function getFlavorByIndex(/*your code here*/){
-  /*your code here*/
+function getFlavorByIndex(arr, num){
+  return arr[num]
 }
 
 
@@ -152,10 +152,14 @@ Use the removeFlavorByName function below to do the following:
   HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(/*your code here*/){
-  /*your code here*/
+function removeFlavorByName(arr, name){
+  let filteredArray = []
+  for(var i=0; i<arr.length; i++){
+    if(arr[i] !== name)filteredArray.push(arr[i]);
+  }
+  return filteredArray
 }
-
+removeFlavorByName(originalFlavors, "Rocky Road")
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
