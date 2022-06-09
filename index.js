@@ -46,8 +46,16 @@ Use the copy function below to do the following:
 */
 
 
-function copy(/*your code here*/){
-  /*your code here*/
+function copy(arr){
+  
+  let newFlavors = []
+
+  for(let i = 0; i < arr.length; i++){
+    newFlavors.push(arr[i])
+  }
+
+  return newFlavors;
+
 }
 
 
@@ -63,8 +71,8 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 */
 
 
-function is31Flavors(/*your code here*/){
-  /*your code here*/
+function is31Flavors(arr){
+  return arr.length === 31 ? true : false;
  }
 
 
@@ -82,9 +90,15 @@ Use the addFlavor function below to do the following:
 */
 
 
-function addFlavor(/*your code here*/){
-  /*your code here*/
- }
+function addFlavor(arr, flavor) {
+  
+  // console.log([arr.unshift(flavor)])
+  arr.unshift(flavor)
+  return arr
+  
+}
+
+addFlavor(originalFlavors,'Rainbow Sherbert')
 
 
 
