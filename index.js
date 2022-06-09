@@ -157,7 +157,6 @@ function removeFlavorByName(arr, name){
   arr.splice(i, 1)
   return arr
 }
-removeFlavorByName(originalFlavors, "Rocky Road")
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -179,11 +178,15 @@ Use the filterByWord function below to do the following:
 */
 
 
-function filterByWord(/*your code here*/){
-  /*your code here*/
+function filterByWord(arr, flavor){
+  let filteredArr = []
+  for(let flavors of arr){
+    if(flavors.includes(flavor))filteredArr.push(flavors)
+  }
+  return filteredArr
 }
 
-
+filterByWord(originalFlavors, "Chocolate")
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 
 
@@ -197,10 +200,19 @@ Use the getAverageWordLength function below to do the following:
   For example: getAverageWordLength(originalFlavors) should return a number between 0 and 3.     
 */
 
-function getAverageWordLength(/*code here*/){
-  /*code here*/
+function getAverageWordLength(arr){
+  let aver = 0
+  for(var i=0; i<arr.length; i++){
+    let word = arr[i].split(' ')
+    aver += word.length
+  }
+
+  return Math.round(aver / arr.length)
+
 }
 
+console.log(getAverageWordLength(originalFlavors)
+)
 
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪💪💪💪
 Baskin Robins now offers new flavors, seasonal flavors, and even regional flavors. Write a function that will randomly select a total of 31 flavors 
